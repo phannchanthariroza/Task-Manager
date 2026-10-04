@@ -16,8 +16,7 @@ export default function InsightsScreen() {
   return (
     <ThemedView style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
-        <ThemedText type="small" themeColor="textSecondary">YOUR WEEK</ThemedText>
-        <ThemedText type="subtitle">Insights</ThemedText>
+        <ThemedText type="subtitle" style={styles.screenTitle}>Insights</ThemedText>
         <ThemedText themeColor="textSecondary">A quick view of your momentum.</ThemedText>
         <View style={[styles.stats, wide && styles.statsWide]}>
           <ThemedView style={[styles.stat, { backgroundColor: theme.backgroundElement }]}>
@@ -44,7 +43,8 @@ export default function InsightsScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  content: { width: '100%', maxWidth: 760, alignSelf: 'center', padding: 20, gap: 14 },
+  content: { width: '100%', maxWidth: 760, alignSelf: 'center', padding: 20, paddingTop: 32, gap: 14 },
+  screenTitle: { fontSize: 30, lineHeight: 38 },
   stats: { gap: 12, marginTop: 18 },
   statsWide: { flexDirection: 'row' },
   stat: { flex: 1, borderRadius: 18, padding: 18, gap: 4 },
